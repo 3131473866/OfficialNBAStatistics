@@ -1,0 +1,186 @@
+<html>
+<head> 
+    <!-- Tab Title of Page -->
+   <title>Official NBA Statistics: About Page</title>
+
+   <style>
+   /*Sets background color to body*/
+   #mainBody{
+    background-color: #151226;
+   }
+    
+    
+    /*Changes color for main nav bar*/
+    #main-nav {
+        background-color: #C9082A;
+        border-radius: 30px;
+        width: 40%;
+        float: right;
+    }
+
+    /*Changes color for main nav bar*/
+    #main-nav a{
+        font-family: Impact, fantasy;
+    }
+    
+
+    /*Centers the main nav bar ul text*/
+    #main-nav ul{
+        text-align: center;
+    }
+
+    /*Styles the nav bar options*/
+    #main-nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        width: 11%;
+        padding: 12px;
+    }
+
+    /*Removes hyperlink style*/
+    #main-nav li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    /*Color change for the nav options box on hover*/
+    #main-nav li:hover  {
+        background-color:#17408B;;
+        border-radius: 30px;
+        text-decoration: underline;
+    }
+    /*Color change for the nav options text on hover*/
+    #main-nav li:hover a  {
+        color: aliceblue;
+    }
+
+
+    #main_header .title_h1{
+        display: inline;
+        margin-right: 10px;
+
+    }
+
+
+    #ballspin{
+        animation: spin 2s infinite linear;
+        transform-origin: center;
+        display: inline-block;
+    }
+
+    @keyframes spin {
+        to {
+        transform: rotate(360deg);
+        }
+    }
+
+    #title{
+        color: white;
+        font-family: Impact, fantasy;
+
+    }
+    .Playersbox{
+            background-color: #C9082A;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+    }
+    h1,h3{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    img{
+        border-radius: 8px;
+    }
+
+
+    </style>
+    
+</head>
+<body id="mainBody">
+
+
+    <nav id="main-nav">
+        <ul>
+            <!--Adding links to each option -->
+            <li><a href="./homePage.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./players_page.html">Players</a></li>
+            <li><a href="./teamPage.html">Teams</a></li>
+            <li><a href="./Help.html">Help</a></li>
+        </ul>
+    </nav>
+
+    <div id="main_header">
+        <h1 class="title_h1" style="color: #17408B" >Official</h1>
+        <h1 class="title_h1" style="color: #FFFFFF;"> NBA</h1>
+        <h1 class="title_h1" style="color: #C9082A;">Statistics</h1>
+        <a href="welcome_page.html">
+        <h1 id="ballspin" >&#x1F3C0;</h1>
+        <a>
+    </div>
+    <br>
+    <br>
+    <h1 id="title">About Page</h1>
+    <div>
+        <br>
+        <div class="Playersbox">
+            
+            <h3>
+                Our platform aims to provide a user-friendly and visually appealing way to access NBA statistics for people in fantasy leagues and sports betting. We understand that it can be overwhelming to navigate through the vast amount of data available, so we have designed our platform to make it easy for users to search for specific players or teams and compare their stats based on different criteria. 
+                <br>
+                <br>
+                To achieve this, we use graphs and images to visualize the data, making it easier for users to understand and interpret the information. For example, we can create bar and line graphs to compare the average points per game for a specific season year between 5 user picked NBA players. We can also use a team map to show where different teams are located across the country and by clicking each of the teams shown on the map, various information about them will be displayed. 
+                <br>
+                <br>
+                Our platform is not only useful for people in fantasy leagues or sports betting, but also for sponsors and the NBA in general. By providing a comprehensive and easy-to-use platform for accessing NBA statistics, we hope to contribute to the growth and success of the league.
+                <br>
+                <br>
+                The BALLDONTLIE API is a platform that provides NBA team and individual stats. The reason we chose this API is that we wanted to help sports betters and those who engage in NBA fantasy leagues make more informed and logical decisions. By using this API, we can provide our users with accurate and up-to-date information that can help them make better decisions. 
+                <br>
+                <br>
+                <a href="https://app.balldontlie.io/">https://app.balldontlie.io/</a>
+                <br>
+                <br>
+                To display this information, we will be styling our web pages using HTML and CSS. Additionally, we will be using Javascript to fetch the API using the FETCH method. This will allow us to retrieve the data we need and display it in a user-friendly way.
+                Our platform will also make use of Node.js and Express for the backend and server-side code. The Chart.js JavaScript library is used to create and display the bar and line graphs.
+            </h3>
+            <br> 
+            <br>
+            <br>
+            <h1 style="text-align:center"> Website Developers</h1>
+            <div style="text-align: center;">
+                <img src="zach.jpg" alt="Zachariah Zachariah">
+                <h3>Name: Zachariah Zachariah</p></h3>
+                <h3>Degree: Information Science, Astronomy minor</h3>
+                <h3>Grade standing: Senior</h3>
+                <h3>Hobbies/Pastimes: Travel to new places, hike, and play video games.  I also code on the 
+                    side as a hobby. </h3>
+            </div>
+            <br> 
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <img src="shengjie.jpg" alt="Shengjie Liu">
+                <h3>Name: Shengjie Liu</p></h3>
+                <h3>Degree: Information Science</h3>
+                <h3>Grade standing: Senior</h3>
+                <h3>Hobbies/Pastimes: Music, Workout, Movies and Play games </h3>
+            </div>
+            <br> 
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <img src="Sarah.png" alt="Sarah Peng">
+                <h3>Name: Sarah Peng</p></h3>
+                <h3>Degree: Information Science and Business Analytics</h3>
+                <h3>Grade standing: Junior</h3>
+                <h3>Hobbies/Pastimes: Basketball, University of Maryland Sports, Music, and , Movies</h3>
+            </div>
+        </div>
+        
+    
+</body>
+</html>

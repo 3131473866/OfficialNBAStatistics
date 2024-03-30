@@ -1,0 +1,68 @@
+<html>
+<head> 
+
+   <title>Welcome!</title>
+
+   <style>
+   #mainBody{
+    background-color: #151226;
+   }
+
+   .Main {
+    display: flex;
+    align-items: center; 
+    }
+
+    #title_button{
+        position: absolute;
+        right: 300px;
+        text-align: center;
+    }
+
+    h1{
+        font-family: Impact, fantasy;
+    }
+
+    #speaker_status{
+        background-color: #151226;
+        position: relative;
+        right: 36px;
+        bottom: 7px;
+    }
+
+    audio{
+        opacity: 0;
+    }
+
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+</head>
+<body id="mainBody">
+
+  <div class="Main">
+    <div>
+        <img src ="lebron.gif" height="98%">
+        <button id="speaker_status" title="Click to mute and unmute sound">&#x1F507;</button>
+        <audio controls autoplay loop id="audio">
+            <source src="welcome_page_audio.mp3" type="audio/mpeg"> 
+        </audio> 
+    </div>
+    <div id="title_button">
+        <h1 style="color: #17408B" >Official</h1>
+        <h1 style="color: #FFFFFF;"> NBA</h1>
+        <h1 style="color: #C9082A;">Statistics &#x1F3C0;</h1>
+
+        <a href="welcome_page_animation.html">
+            <button class="button-73" role="button">ENTER</button>
+        </a>
+
+        <script src="welcome_page.js" defer></script>
+    </div>
+  </div>
+
+
+  
+
+</body>
+</html>

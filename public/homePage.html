@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="mainBody">
+    <nav id="main-nav">
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="players_page.html">Players</a></li>
+            <li><a href="teamPage.html">Teams</a></li>
+            <li><a href="Help.html">Help</a></li>
+        </ul>
+    </nav>
+    <div id="main_header">
+        <h1 class="title_h1" style="color: #17408B;">Official</h1>
+        <h1 class="title_h1" style="color: #FFFFFF;">NBA</h1>
+        <h1 class="title_h1" style="color: #C9082A;">Statistics</h1>
+        <a href="welcome_page.html">
+            <h1 id="ballspin">&#x1F3C0;</h1>
+        </a>
+    </div>
+    <div class="table-container">
+        <div class="table">
+            <h2>Most Recent Searched Players</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                    </tr>
+                </thead>
+                <tbody id="topPlayerTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table">
+            <h2>Most Recent Searched Teams</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody id="topTeamTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <div class="search-container">
+        <div class="search-section" id="search-player">
+            <h2>Search Player</h2>
+            <input type="text" id="playerName" placeholder="Enter player name">
+            <button onclick="searchAndInsert('player')">Search Player</button>
+            <div id="playerStats" class="search-results"></div>
+        </div>
+
+        <div class="search-section" id="search-team">
+            <h2>Search Team</h2>
+            <input type="text" id="teamName" placeholder="Enter team name">
+            <button onclick="searchAndInsert('team')">Search Team</button>
+            <div id="teamInfo" class="search-results"></div>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-section" id="search-date">
+            <h2>Search Date</h2>
+            <input type="date" id="gameDate">
+            <button onclick="searchDate()">Search</button>
+            <div id="gameInfo" class="search-results"></div>
+        </div>
+
+        <div class="search-section" id="search-stats">
+            <h2>Search Stats</h2>
+            <input type="date" id="statDate">
+            <button onclick="searchStats()">Search</button>
+            <div id="statInfo" class="search-results"></div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="homePage.js"></script>
+</body>
+
+</html>

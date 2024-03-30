@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>Official NBA Statistics: Team Page</title>
+        <script src="teamPage.js"></script>
+        <style>
+            #mainBody{
+                background-color: #151226;
+            }
+                            /*Changes color for main nav bar*/
+                            #main-nav {
+                    background-color: #C9082A;
+                    border-radius: 30px;
+                    width: 40%;
+                    float: right;
+                }
+
+            /*Changes color for main nav bar*/
+            #main-nav a{
+                font-family: Impact, fantasy;
+            }
+            
+
+            /*Centers the main nav bar ul text*/
+            #main-nav ul{
+                text-align: center;
+            }
+
+            /*Styles the nav bar options*/
+            #main-nav ul li {
+                list-style-type: none;
+                display: inline-block;
+                text-align: center;
+                width: 11%;
+                padding: 12px;
+            }
+
+            /*Removes hyperlink style*/
+            #main-nav li a{
+                text-decoration: none;
+                color: black;
+            }
+            
+            /*Color change for the nav options box on hover*/
+            #main-nav li:hover  {
+                background-color:#17408B;;
+                border-radius: 30px;
+                text-decoration: underline;
+            }
+            /*Color change for the nav options text on hover*/
+            #main-nav li:hover a  {
+                color: aliceblue;
+            }
+
+            #main_header .title_h1{
+                display: inline;
+                margin-right: 10px;
+
+            }
+
+            #ballspin{
+                animation: spin 2s infinite linear;
+                transform-origin: center;
+                display: inline-block;
+            }
+
+            @keyframes spin {
+                to {
+                transform: rotate(360deg);
+                }
+            }
+            #title{
+                color: white;
+                font-family: Impact, fantasy;
+
+            }
+            .teamMap img {
+                border: 2px solid #ddd; 
+                border-radius: 10px; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+                filter: grayscale(10%);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #teamInfo {
+                background-color: #ffffff; 
+                border: 1px solid #b3b2b2; 
+                border-radius: 10px; 
+                margin: 10px;
+                padding: 20px; 
+                width: 50%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+                line-height: 1.5;
+                color: #333;
+                transition: background-color 0.3s, box-shadow 0.3s;
+                background-color: rgba(255, 255, 255, 0.9); 
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: Impact, fantasy;
+            }
+            #teamInfo p {
+                font-size: 18px; 
+            }
+
+
+        </style>
+    </head>
+    <body id="mainBody">
+        <!-- Navigation Bar -->
+        <nav id="main-nav">
+            <ul>
+                <!--Adding links to each option -->
+                <li><a href="./homePage.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./players_page.html">Players</a></li>
+                <li><a href="./teamPage.html">Teams</a></li>
+                <li><a href="./Help.html">Help</a></li>
+            </ul>
+        </nav>
+        <div id="main_header">
+            <h1 class="title_h1" style="color: #17408B" >Official</h1>
+            <h1 class="title_h1" style="color: #FFFFFF;"> NBA</h1>
+            <h1 class="title_h1" style="color: #C9082A;">Statistics</h1>
+            <a href="welcome_page.html">
+            <h1 id="ballspin" >&#x1F3C0;</h1>
+            <a>
+        </div>
+        <br>
+        <br>
+        <!-- Main text area -->
+        <div class="main"> 
+            <h1 id="title">Click on a team to get information</h1>
+            <div class="main">
+                <div class="teamMap">
+                    <img src="https://i.pinimg.com/736x/d8/3f/fe/d83ffebc6d291c8ffaa8240775f03f4c.jpg" alt="map of the U.S. with teams" usemap="#teams" width="563" height="349">
+                    <map name="teams">
+                        <!-- Atlantic -->
+                        <area shape="poly" coords="494,149,488,141,481,136,474,130,468,124,468,119,473,115,476,119,480,121,483,125,486,127,491,130,494,133,495,139" onclick="handleAreaClick(23)" title="Philadelphia 76ers" >
+                        <area shape="poly" coords="475,68,473,74,469,79,468,90,460,95,450,95,448,102,447,109,452,112,458,113,465,112,468,107,472,100,472,92,476,85,480,77,479,71" onclick="handleAreaClick(28)" title="Toronto Raptors">
+                        <area shape="poly" coords="481,84,484,89,487,93,491,96,494,99,498,102,501,104,504,107,507,109,506,116,497,118,491,119,485,116,481,110,478,104,478,97,479,92" onclick="handleAreaClick(20)" title="New York Knicks">
+                        <area shape="poly" coords="523,23,530,22,532,28,537,36,540,42,545,48,548,52,546,56,537,64,533,67,531,71,528,74,523,80,524,88,528,94,524,98,518,101,512,102,506,98,501,93,497,89,492,87,489,83,487,74,486,67,493,67,500,62,507,58,512,49,512,43,512,35,514,29,518,25" onclick="handleAreaClick(2)" title="Boston Celtics">
+                        <area shape="poly" coords="511,122,511,127,505,130,499,126,501,119,506,120" onclick="handleAreaClick(3)" title="Brooklyn Nets">
+                        <!-- Central -->
+                        <area shape="poly" coords="438,117,433,122,427,126,422,126,415,126,414,132,413,136,414,140,417,145,421,152,423,156,426,160,434,156,439,152,443,145,445,139,448,131,448,124,443,121" onclick="handleAreaClick(6)" title="Cleveland Cavaliers">
+                        <area shape="poly" coords="385,119,383,124,380,128,373,128,367,126,361,125,353,127,344,128,337,130,330,133,328,141,324,145,321,150,318,155,323,158,328,159,335,159,340,160,345,158,351,155,356,150,361,145,368,141,374,138,380,135,384,130,388,127,387,122" onclick="handleAreaClick(5)" title="Chicago Bulls">
+                        <area shape="poly" coords="392,133,387,135,384,138,381,140,372,146,365,150,359,157,353,163,350,167,357,171,365,174,374,179,383,182,390,186,399,184,407,181,413,171,418,163,414,157,408,152,405,147,400,142,396,138" onclick="handleAreaClick(12)" title="Indiana Pacers">
+                        <area shape="poly" coords="383,66,377,66,366,66,360,66,358,73,357,78,354,84,350,89,346,90,344,97,341,102,340,106,339,112,336,116,336,123,342,122,352,119,360,118,366,115,375,114,381,114,381,109,381,100,380,90,380,83,382,77,382,73" onclick="handleAreaClick(17)" title="Milwaukee Bucks">
+                        <area shape="poly" coords="404,130,407,124,411,120,415,116,416,107,415,98,414,93,411,87,409,84,406,79,401,78,394,78,389,80,389,86,389,92,389,97,389,103,390,110,390,114,392,119,395,124,399,126" onclick="handleAreaClick(9)" title="Detroit Pistons">
+                        <!-- Southeast -->
+                        <area shape="poly" coords="410,190,404,190,396,194,390,194,390,203,389,209,389,215,387,220,384,228,382,233,382,239,384,246,388,250,394,253,398,255,403,259,407,265,415,261,422,255,431,252,438,245,444,241,438,236,433,229,429,224,427,219,423,214,422,207,417,202,413,196" title="Atlanta Hawks" onclick="handleAreaClick(1)">
+                        <area shape="poly" coords="449,251,442,254,435,256,428,262,423,266,414,271,422,272,429,275,435,283,436,291,439,300,442,304,449,302,456,301,465,296,467,289,462,284,460,276,456,270,452,261" onclick="handleAreaClick(22)" title="Orlando Magic">
+                        <area shape="poly" coords="469,301,462,307,454,311,456,318,460,326,466,330,475,329,477,320,477,310,476,304" onclick="handleAreaClick(16)" title="Miami Heat">
+                        <area shape="poly" coords="454,235,449,232,445,228,443,221,439,215,434,208,428,205,426,199,422,195,418,190,418,183,421,177,427,175,430,171,432,170,439,168,444,171,449,176,456,179,462,180,467,185,472,188,476,190,483,194,488,198,480,205,475,210,466,217,464,222,458,229" onclick="handleAreaClick(4)" title="Charlotte Hornets">
+                        <area shape="poly" coords="457,125,457,131,456,137,454,142,452,146,449,151,447,159,444,164,453,168,460,171,466,173,471,177,474,180,481,183,487,186,493,186,492,176,487,168,482,162,480,154,478,146,476,140,472,136,466,132,462,128" onclick="handleAreaClick(30)" title="Washington Wizards">
+                        <!-- Northwest -->
+                        <area shape="poly" coords="212,43,209,54,209,62,206,70,202,79,202,90,197,95,194,104,192,112,190,121,186,130,179,137,174,142,174,149,173,157,173,169,169,181,168,190,178,192,182,200,187,203,192,208,197,215,206,215,213,211,221,203,225,193,233,185,238,179,247,171,249,162,257,153,262,147,262,136,261,130,259,124,254,115,254,106,250,98,246,95,236,84,230,74,225,70,221,63,217,54" onclick="handleAreaClick(8)" title="Denver Nuggets">
+                        <area shape="poly" coords="198,38,186,35,177,34,164,32,158,38,152,46,150,53,144,56,139,60,136,70,130,73,119,73,117,81,112,86,109,97,104,106,99,116,100,125,100,133,103,138,111,148,111,155,103,162,103,166,113,169,123,169,134,170,146,172,158,173,158,163,158,144,163,130,171,125,178,120,180,108,179,101,179,89,182,78,189,74,188,68,194,56,198,53,204,42" onclick="handleAreaClick(29)" title="Utah Jazz">
+                        <area shape="poly" coords="276,149,271,152,266,157,261,164,255,172,251,180,246,187,239,191,234,200,228,205,224,214,217,222,210,228,217,228,225,232,235,232,242,232,249,229,256,226,264,225,271,225,281,224,290,221,297,217,305,212,308,204,309,195,311,186,312,178,312,167,311,161,305,157,295,155,289,153,284,151" onclick="handleAreaClick(21)" title="Oklahoma City Thunder">
+                        <area shape="poly" coords="53,12,66,20,72,9,117,21,156,29,149,36,143,46,136,54,130,63,121,71,110,71,107,81,100,88,97,98,96,102,88,102,69,98,54,93,39,88,35,81,38,73,44,64,48,51,52,42,53,32,53,21" title="Portland Trail Blazers" onclick="handleAreaClick(25)">
+                        <area shape="poly" coords="99,260,85,259,73,258,64,259,62,265,59,273,60,279,55,279,60,288,52,286,66,296,57,303,59,314,69,316,70,323,60,331,83,323,86,316,93,314,101,304,116,305,128,310,140,315,112,297,109,284,107,265,107,273" title="Portland Trail Blazers" onclick="handleAreaClick(25)">
+                        <area shape="poly" coords="224,39,225,43,227,52,229,59,233,64,237,70,244,77,249,85,254,91,258,97,258,103,259,107,264,113,267,120,267,125,271,130,274,135,277,140,284,141,289,142,296,144,304,148,312,151,315,144,318,138,324,129,328,122,329,113,331,104,335,97,340,93,342,87,347,79,349,67,336,69,325,69,335,55,323,49,311,47,302,46,292,43,275,42,259,42,247,41,237,41" onclick="handleAreaClick(18)" title="Minnesota Timberwolves">
+                        <!-- Pacific -->
+                        <area shape="poly" coords="91,108,74,105,64,101,54,98,43,94,37,93,34,98,30,108,31,115,30,124,37,129,39,134,41,138,47,141,54,145,56,151,59,154,66,154,75,155,80,159,83,164,89,167,92,158,94,149,94,142,93,133,93,126,92,117" onclick="handleAreaClick(26)" title="Sacramento Kings">
+                        <area shape="poly" coords="29,134,29,140,29,145,29,153,31,157,33,163,36,168,42,169,49,169,56,166,48,164,47,159,47,154,42,154,39,151,37,147,35,143,34,138" onclick="handleAreaClick(10)" title="Golden State Warriors">
+                        <area shape="poly" coords="29,134,29,140,29,145,29,153,31,157,33,163,36,168,42,169,49,169,56,166,48,164,47,159,47,154,42,154,39,151,37,147,35,143,34,138,230,331,219,325,206,317,190,314,172,307,163,321,179,325,199,328,208,339,213,344,228,343" onclick="handleAreaClick(10)" title="Golden State Warriors">
+                        <area shape="poly" coords="62,202,70,198,78,192,83,187,87,183,85,178,83,174,79,170,75,166,67,167,57,171,52,174,45,177,43,182,44,187,47,191,52,196,58,200" onclick="handleAreaClick(13)" title="LA Clippers">
+                        <area shape="poly" coords="94,178,85,187,77,193,68,199,65,206,72,220,84,222,93,222,96,206,96,199,96,193,97,183" onclick="handleAreaClick(14)" title="Los Angeles Lakers">
+                        <area shape="poly" coords="118,179,111,189,107,201,108,208,104,218,100,230,110,233,119,239,131,247,142,250,153,250,164,247,178,248,188,254,189,242,189,232,188,222,183,220,179,216,171,211,170,207,164,205,156,195,145,184,129,182,135,182" onclick="handleAreaClick(24)" title="Phoenix Suns">
+                        <!-- Southwest -->
+                        <area shape="poly" coords="233,238,238,242,246,247,255,251,261,256,267,257,278,260,288,260,296,258,303,256,309,251,322,246,320,238,316,233,310,229,302,228,293,228,286,228,280,230,274,231,266,231,261,232,253,233,246,238" onclick="handleAreaClick(7)" title="Dallas Mavericks">
+                        <area shape="poly" coords="283,270,283,277,284,283,285,291,290,294,296,291,306,286,313,283,323,282,323,274,323,266,323,260,314,260,304,261,298,264,292,267" onclick="handleAreaClick(11)" title="Houston Rockets">
+                        <area shape="poly" coords="203,241,202,254,199,266,199,272,203,280,210,284,215,287,218,280,227,280,237,287,240,301,248,309,252,320,256,320,265,326,278,328,278,313,282,304,286,295,277,290,275,281,274,270,264,266,254,265,247,260,240,256,232,251,223,247,216,241,209,238" onclick="handleAreaClick(27)" title="San Antonio Spurs">
+                        <area shape="poly" coords="321,164,321,174,321,184,319,199,318,211,323,223,326,234,335,242,355,242,372,242,375,227,380,219,382,207,382,198,374,189,359,183,346,177,337,170,330,167" onclick="handleAreaClick(15)" title="Memphis Grizzlies">
+                        <area shape="poly" coords="330,252,330,260,332,271,333,280,344,282,358,284,367,282,372,277,386,277,392,271,389,264,384,255,375,252,364,252,351,252,343,252,338,252" onclick="handleAreaClick(19)" title="New Orleans Pelicans">
+                    </map>
+                </div>
+                <div id="teamInfo">
+                    <p>Click on a team to get its information</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

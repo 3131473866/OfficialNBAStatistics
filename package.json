@@ -1,0 +1,15 @@
+{
+  "name": "inst377-final-projectt",
+  "version": "1.0.0",
+  "description": "INST377 Project NBA Analytics",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e '*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

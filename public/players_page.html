@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>NBA Player Stats</title>
+    
+    <style>
+        
+        /*Sets background color to body*/
+   #mainBody{
+    background-color: #151226;
+   }
+    
+    
+    /*Changes color for main nav bar*/
+    #main-nav {
+        background-color: #C9082A;
+        border-radius: 30px;
+        width: 40%;
+        float: right;
+        border: 3px solid black;
+    }
+
+    /*Changes color for main nav bar*/
+    #main-nav a{
+        font-family: Impact, fantasy;
+    }
+    
+
+    /*Centers the main nav bar ul text*/
+    #main-nav ul{
+        text-align: center;
+    }
+
+    /*Styles the nav bar options*/
+    #main-nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        width: 11%;
+        padding: 12px;
+    }
+
+    /*Removes hyperlink style*/
+    #main-nav li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    /*Color change for the nav options box on hover*/
+    #main-nav li:hover  {
+        background-color:#17408B;;
+        border-radius: 30px;
+        text-decoration: underline;
+    }
+    /*Color change for the nav options text on hover*/
+    #main-nav li:hover a  {
+        color: aliceblue;
+    }
+
+
+    #main_header .title_h1{
+        display: inline;
+        margin-right: 10px;
+
+    }
+
+
+    #ballspin{
+        animation: spin 2s infinite linear;
+        transform-origin: center;
+        display: inline-block;
+    }
+
+    @keyframes spin {
+        to {
+        transform: rotate(360deg);
+        }
+    }
+           
+        #container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .Playersbox{
+            background-color: #C9082A;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 3px solid black;
+        }
+
+
+        input[type="text"],
+        input[type="date"],
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #1D428A;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: lightblue;
+        }
+        
+        #mychart{
+            background-color:  #151226;
+        }
+        
+        h2{
+            font-family: Impact, fantasy;
+        }
+
+        #autocomplete-container0,#autocomplete-container1,#autocomplete-container2,
+        #autocomplete-container3,#autocomplete-container4 {
+            width: 50%;
+        }
+        
+        #playerboxGraph{
+            background-color: blueviolet;
+        }
+
+        #playerboxStat{
+            background-color: rgb(212, 76, 18);
+            position: relative;
+            margin: 0 auto; 
+            left: 320px;
+            width: 50%;
+            text-align: center;
+        }
+
+        #dropdown1{
+            position: relative;
+            width: 90%;
+            left: 10px;
+        }
+       
+        #h2_options{
+            margin-top: 50px;
+            position: relative;
+            top: 50px;
+        }
+
+    </style>
+
+<link rel="stylesheet" type="text/css" href="players_page_selector.css">
+<link rel='stylesheet' href='https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css'><link rel="stylesheet" href="./style1.css">
+<link rel="stylesheet" type="text/css" href="autocomplete.css">
+</head>
+
+<body id="mainBody">
+    <nav id="main-nav">
+        <ul>
+            <!--Adding links to each option -->
+            <li><a href="./homePage.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./players_page.html">Players</a></li>
+            <li><a href="./teamPage.html">Teams</a></li>
+            <li><a href="./Help.html">Help</a></li>
+        </ul>
+    </nav>
+
+    <div id="main_header">
+        <h1 class="title_h1" style="color: #17408B" >Official</h1>
+        <h1 class="title_h1" style="color: #FFFFFF;"> NBA</h1>
+        <h1 class="title_h1" style="color: #C9082A;">Statistics</h1>
+        <a href="welcome_page.html" title="Click to go to Welcome page">
+        <h1 id="ballspin" >&#x1F3C0;</h1>
+        <a>
+    </div>
+
+
+
+    <h1 style="color: #FFFFFF;"> <u>Player Game Stats</u></h1>
+
+    <h2 style="color: #FFFFFF;">Chart:</h2>
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <h2 id="h2_options" style="color: #FFFFFF;">Options:</h2>
+
+    <div id="container">
+
+        <div class="Playersbox" id="playerboxGraph">
+            <h2>Pick A Graph To Display</h2>
+             <div>
+                <div class="dropdown" id="dropdown0">
+                    <div class="select">
+                      <span>Select graph</span>
+                      <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <ul class="dropdown-menu" id="menu">
+                      <li value="bar" id="bar">Bar Chart</li>
+                      <li value="line" id="line">Line Chart</li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+
+        <div class="Playersbox">
+            <h2>Search Player 1</h2>
+            <div>
+                <div id="autocomplete-container0"></div>
+            </div>
+            <div id="playerStats1"></div>
+        </div>
+
+        <div class="Playersbox">
+            <h2>Search Player 2</h2>
+            <div>
+                <div id="autocomplete-container1"></div>
+            </div>
+        </div>
+
+        <div class="Playersbox">
+            <h2>Search Player 3</h2>
+            <div>
+                <div id="autocomplete-container2"></div>
+            </div>
+        </div>
+
+        <div class="Playersbox">
+            <h2>Search Player 4</h2>
+            <div>
+                <div id="autocomplete-container3"></div>
+            </div>
+        </div>
+
+        <div class="Playersbox">
+            <h2>Search Player 5</h2>
+            <div>
+                <div id="autocomplete-container4"></div>
+            </div>
+        </div>
+
+
+        <div class="Playersbox" id="playerboxStat">
+            <h2>Select Statistics Options</h2>
+             <div>
+                <div class="dropdown" id="dropdown1">
+                    <div class="select">
+                      <span>Select statistics</span>
+                      <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <ul class="dropdown-menu" id="menu">
+                      <li value="Top NBA Players of 2023 [Total Career Points]" id="Top NBA Players of 2023 [Total Career Points]">Top NBA Players of 2023 [Total Career Points]</li>
+                      <li value="Weight[Pounds]" id="Weight[Pounds]">Weight[Pounds]</li>
+                      <li value="Season 2023 [Avg Points Scored Per Game]" id="Season 2023 [Avg Points Scored Per Game]">Season 2023 [Avg Points Scored Per Game]</li>
+                      <li value="Season 2022 [Avg Points Scored Per Game]" id="Season 2022 [Avg Points Scored Per Game]">Season 2022 [Avg Points Scored Per Game]</li>
+                      <li value="Season 2021 [Avg Points Scored Per Game]" id="Season 2021 [Avg Points Scored Per Game]">Season 2021 [Avg Points Scored Per Game]</li>
+                      <li value="Season 2020 [Avg Points Scored Per Game]" id="Season 2020 [Avg Points Scored Per Game]">Season 2020 [Avg Points Scored Per Game]</li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="https://unpkg.com/accessible-autocomplete/dist/accessible-autocomplete.min.js"></script>
+    <script  src="players_page.js" defer></script>
+    
+
+</body>
+<script src=""></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
